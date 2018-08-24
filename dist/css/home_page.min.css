@@ -1,0 +1,477 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  font-weight: normal; }
+
+ul, ol, li {
+  list-style: none; }
+
+b, strong {
+  font-weight: normal; }
+
+em, i {
+  font-style: normal; }
+
+a, u {
+  text-decoration: none; }
+
+img {
+  border: 0;
+  display: block; }
+
+input {
+  outline: none; }
+
+.clear_fix:after {
+  content: '.';
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+
+.clear_fix {
+  zoom: 1; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.header_cont, .nav_cont, .banner_cont, .recommend_cont, .new_cont {
+  width: 1192px;
+  margin: 0 auto; }
+
+#header {
+  height: 33px;
+  background: #f2f2f2;
+  border-bottom: 1px solid #e5e5e5; }
+  #header .header_left {
+    width: 210px;
+    height: 33px;
+    float: left;
+    line-height: 33px; }
+    #header .header_left span {
+      font-size: 12px;
+      color: #6c6c6c; }
+      #header .header_left span:first-child {
+        margin-right: 15px; }
+      #header .header_left span a {
+        color: #ec3e7d;
+        text-decoration: underline; }
+  #header .header_right {
+    float: right;
+    font-size: 12px;
+    color: #888888;
+    width: 680px;
+    height: 33px;
+    cursor: pointer; }
+    #header .header_right .right_li {
+      float: left;
+      height: 33px;
+      line-height: 33px;
+      margin: 0;
+      padding: 0 12px 0;
+      position: relative; }
+      #header .header_right .right_li:first-child {
+        margin: 0;
+        padding: 0 10px 0; }
+        #header .header_right .right_li:first-child i:nth-of-type(1) {
+          color: #ec3e7d;
+          font-size: 16px;
+          margin: 2px 1px 0;
+          padding: 0;
+          font-weight: bold; }
+        #header .header_right .right_li:first-child i:nth-of-type(2) {
+          display: block;
+          float: right;
+          margin-top: 14px;
+          margin-left: 3px;
+          width: 10px;
+          height: 6px;
+          background: url("../../images/icon-jt.png") no-repeat -34px 0; }
+        #header .header_right .right_li:first-child .right_1 {
+          position: absolute;
+          left: 0px;
+          box-shadow: 2px 4px 6px 2px #CEC2C2;
+          background: #fff;
+          display: none; }
+          #header .header_right .right_li:first-child .right_1 li {
+            width: 89px;
+            height: 28px;
+            line-height: 28px;
+            margin: 0;
+            padding: 0 0 0 15px; }
+      #header .header_right .right_li:nth-child(2) i:nth-of-type(1) {
+        color: #ec3e7d;
+        font-size: 14px;
+        margin: 2px 2px 0;
+        padding: 0;
+        font-weight: bold; }
+      #header .header_right .right_li:nth-child(2) .right_2 {
+        position: absolute;
+        box-shadow: 2px 4px 6px 2px #CEC2C2;
+        left: -170px;
+        background: #fff;
+        padding: 10px 50px 10px 80px;
+        width: 150px;
+        display: none; }
+        #header .header_right .right_li:nth-child(2) .right_2 li {
+          width: 130px;
+          line-height: 30px; }
+      #header .header_right .right_li:nth-child(3) i:first-child {
+        color: #ec3e7d;
+        font-size: 14px;
+        margin: 2px 2px 0;
+        padding: 0;
+        font-weight: bold; }
+      #header .header_right .right_li:last-child i {
+        display: block;
+        width: 17px;
+        height: 15px;
+        float: right;
+        margin: 8px 3px 0;
+        padding: 0; }
+
+.nav_cont {
+  font-size: 12px;
+  min-height: 131px; }
+  .nav_cont .nav_top {
+    margin: 0;
+    padding: 21px 0 0 0;
+    min-height: 74px; }
+    .nav_cont .nav_top .logo {
+      float: left;
+      width: 170px; }
+    .nav_cont .nav_top .look_for {
+      float: left;
+      margin: 0;
+      padding: 0 0 0 230px;
+      width: 460px;
+      height: 36px; }
+      .nav_cont .nav_top .look_for .text {
+        float: left;
+        width: 345px;
+        height: 30px;
+        border: 3px solid #ec3e7d;
+        color: #999;
+        padding-left: 6px; }
+      .nav_cont .nav_top .look_for .sub {
+        float: left;
+        width: 92px;
+        height: 36px;
+        background: #ec3e7d;
+        color: #fff;
+        text-align: center;
+        line-height: 30px;
+        border: 0; }
+      .nav_cont .nav_top .look_for p {
+        float: left;
+        color: #999;
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer; }
+        .nav_cont .nav_top .look_for p u {
+          padding: 0 10px 0;
+          border-right: 1px solid #999; }
+          .nav_cont .nav_top .look_for p u:first-child {
+            padding-left: 0; }
+          .nav_cont .nav_top .look_for p u:last-child {
+            border: 0; }
+  .nav_cont .nav_bottom {
+    min-height: 37px; }
+    .nav_cont .nav_bottom .nav_bottom_chose {
+      min-height: 37px; }
+      .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li {
+        cursor: pointer;
+        float: left;
+        padding: 0 17px 0 20px;
+        background: url("../../images/nav.jpg") no-repeat 0 12px;
+        line-height: 37px;
+        text-align: center;
+        font-size: 16px;
+        position: relative; }
+        .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child {
+          width: 190px;
+          background: #333;
+          color: #fff;
+          text-align: left;
+          padding: 0; }
+          .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child i {
+            padding: 0 16px 0; }
+          .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify {
+            position: absolute;
+            width: 190px;
+            z-index: 10000; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify li {
+              height: 51px;
+              font-size: 16px;
+              line-height: 54px;
+              background: #fa3778;
+              color: #fff;
+              padding: 0 14px 0;
+              border-bottom: 1px dashed #fe7dab;
+              position: relative; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_face u:first-of-type, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_cosmetics u:first-of-type, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_perfume u:first-of-type, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_health u:first-of-type, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_slimming u:first-of-type, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_person u:first-of-type, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_man u:first-of-type, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_baby u:first-of-type {
+              font-size: 20px;
+              padding-right: 16px; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_face u:nth-of-type(2), .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_cosmetics u:nth-of-type(2), .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_perfume u:nth-of-type(2), .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_health u:nth-of-type(2), .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_slimming u:nth-of-type(2), .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_person u:nth-of-type(2), .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_man u:nth-of-type(2), .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_baby u:nth-of-type(2) {
+              position: absolute;
+              left: 150px;
+              font-size: 20px; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_face .nav_bottom_box, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_cosmetics .nav_bottom_box, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_perfume .nav_bottom_box, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_health .nav_bottom_box, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_slimming .nav_bottom_box, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_person .nav_bottom_box, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_man .nav_bottom_box, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_baby .nav_bottom_box {
+              z-index: 1000;
+              display: none;
+              width: 300px;
+              min-height: 697px;
+              border: 1px solid #fa3778;
+              position: absolute;
+              background: #fff;
+              left: 189px;
+              top: 0;
+              padding-top: 12px;
+              padding-left: 30px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_face .nav_bottom_box div, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_cosmetics .nav_bottom_box div, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_perfume .nav_bottom_box div, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_health .nav_bottom_box div, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_slimming .nav_bottom_box div, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_person .nav_bottom_box div, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_man .nav_bottom_box div, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_baby .nav_bottom_box div {
+                min-height: 91px;
+                width: 280px;
+                padding-top: 10px;
+                padding-bottom: 10px; }
+                .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_face .nav_bottom_box div h2, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_cosmetics .nav_bottom_box div h2, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_perfume .nav_bottom_box div h2, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_health .nav_bottom_box div h2, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_slimming .nav_bottom_box div h2, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_person .nav_bottom_box div h2, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_man .nav_bottom_box div h2, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_baby .nav_bottom_box div h2 {
+                  font-size: 14px;
+                  line-height: 14px;
+                  color: #555;
+                  font-weight: bold; }
+                .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_face .nav_bottom_box div p, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_cosmetics .nav_bottom_box div p, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_perfume .nav_bottom_box div p, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_health .nav_bottom_box div p, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_slimming .nav_bottom_box div p, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_person .nav_bottom_box div p, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_man .nav_bottom_box div p, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_baby .nav_bottom_box div p {
+                  font-size: 12px;
+                  color: #999;
+                  line-height: 24px;
+                  margin-top: 10px; }
+                  .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_face .nav_bottom_box div p span, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_cosmetics .nav_bottom_box div p span, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_perfume .nav_bottom_box div p span, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_health .nav_bottom_box div p span, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_slimming .nav_bottom_box div p span, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_person .nav_bottom_box div p span, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_man .nav_bottom_box div p span, .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_baby .nav_bottom_box div p span {
+                    margin-right: 16px; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_cosmetics .cosmetics {
+              display: none;
+              min-height: 240px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_cosmetics .cosmetics div {
+                min-height: 60px; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_perfume .perfume {
+              min-height: 100px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_perfume .perfume div {
+                min-height: 66px; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_health .health {
+              min-height: 128px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_health .health div {
+                min-height: 85px; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_slimming .slimming {
+              min-height: 128px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_slimming .slimming div {
+                min-height: 85px; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_person .person {
+              min-height: 198px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_person .person div {
+                min-height: 80px; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_man .man {
+              min-height: 100px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_man .man div {
+                min-height: 60px; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_baby .baby {
+              min-height: 128px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:first-child .nav_bottom_classify .nav_bottom_classify_baby .baby div {
+                min-height: 88px; }
+        .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:nth-child(2) {
+          background: #fff; }
+        .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:nth-child(5) i {
+          float: right;
+          padding-top: 10px;
+          padding-left: 4px; }
+        .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:last-child {
+          position: relative; }
+          .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:last-child .nav_bottom_brand {
+            display: none;
+            position: absolute;
+            z-index: 1000;
+            left: -100px;
+            width: 442px;
+            min-height: 268px;
+            border: 1px solid #bababa;
+            border-top: 0;
+            text-align: left;
+            font-size: 12px; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:last-child .nav_bottom_brand .nav_bottom_top {
+              font-weight: bold;
+              background: #eee;
+              min-height: 27px;
+              color: #ec6697;
+              padding-left: 25px;
+              padding-top: 10px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:last-child .nav_bottom_brand .nav_bottom_top b {
+                display: block;
+                position: absolute;
+                top: -18px;
+                left: 140px;
+                border: 9px solid transparent;
+                border-left-color: transparent;
+                border-bottom-color: #eee;
+                border-right-color: transparent; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:last-child .nav_bottom_brand .nav_bottom_brand_bottom .brand_text {
+              float: left;
+              width: 200px;
+              min-height: 238px;
+              padding-left: 25px;
+              padding-right: 12px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:last-child .nav_bottom_brand .nav_bottom_brand_bottom .brand_text p {
+                min-height: 37px;
+                line-height: 37px; }
+                .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:last-child .nav_bottom_brand .nav_bottom_brand_bottom .brand_text p:last-child {
+                  font-size: 14px;
+                  text-align: center;
+                  font-weight: bold;
+                  border-top: 1px dashed #ddd; }
+            .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:last-child .nav_bottom_brand .nav_bottom_brand_bottom .brand_img {
+              float: right;
+              width: 199px;
+              min-height: 238px; }
+              .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:last-child .nav_bottom_brand .nav_bottom_brand_bottom .brand_img div {
+                width: 97px;
+                height: 73px;
+                padding-top: 10px;
+                float: left;
+                border-left: 1px dashed #ddd;
+                border-bottom: 1px dashed #ddd; }
+          .nav_cont .nav_bottom .nav_bottom_chose .nav_bottom_chose_li:last-child i {
+            background: url("../../images/arrs.gif") no-repeat 0 -88px;
+            display: block;
+            float: right;
+            margin-top: 16px;
+            margin-left: 4px;
+            width: 8px;
+            height: 6px; }
+
+/*banner*/
+#banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+  #banner .banner_cont {
+    height: 450px;
+    position: relative; }
+    #banner .banner_cont img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -960px;
+      margin-top: -220px; }
+  #banner .banner_node {
+    width: 100%;
+    background: #ececec;
+    opacity: 0.8;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    padding-left: 30px; }
+    #banner .banner_node div {
+      float: left;
+      font-size: 12px;
+      color: #999;
+      line-height: 30px; }
+      #banner .banner_node div:first-child {
+        color: #fa3778;
+        font-weight: bold;
+        margin-right: 27px; }
+        #banner .banner_node div:first-child i {
+          margin-right: 4px; }
+
+/*recommend*/
+#recommend {
+  min-height: 320px;
+  background: #f2f2f2; }
+  #recommend .recommend_cont {
+    padding-top: 20px;
+    border-bottom: 1px solid #eeeeee; }
+    #recommend .recommend_cont .recommend_img {
+      min-height: 208px; }
+      #recommend .recommend_cont .recommend_img img {
+        float: left;
+        margin-right: 15px;
+        width: 380px;
+        height: 180px;
+        cursor: pointer; }
+    #recommend .recommend_cont .recommend_node {
+      min-height: 69px; }
+      #recommend .recommend_cont .recommend_node div {
+        float: left;
+        width: 155px;
+        margin-right: 95px; }
+        #recommend .recommend_cont .recommend_node div img {
+          display: block;
+          float: left;
+          margin-right: 10px;
+          width: 25px;
+          height: 25px; }
+        #recommend .recommend_cont .recommend_node div p {
+          float: left;
+          width: 120px; }
+          #recommend .recommend_cont .recommend_node div p span {
+            display: block;
+            font-size: 12px;
+            color: #999;
+            line-height: 12px; }
+            #recommend .recommend_cont .recommend_node div p span:first-child {
+              font-size: 16px;
+              color: #222;
+              margin-bottom: 10px;
+              line-height: 14px; }
+        #recommend .recommend_cont .recommend_node div:last-child {
+          margin: 0; }
+
+/*new*/
+#new {
+  background: #f2f2f2; }
+  #new .new_cont .new_top {
+    min-height: 52px;
+    background: url("../../images/must_check.png") no-repeat; }
+  #new .new_cont .new_bottom {
+    padding-bottom: 42px; }
+    #new .new_cont .new_bottom .new_bottom_node {
+      width: 580px;
+      height: 260px;
+      box-shadow: 2px 4px 5px 1px #ddd8d8;
+      background: #fff;
+      margin-right: 12px;
+      margin-bottom: 17px;
+      float: left; }
+      #new .new_cont .new_bottom .new_bottom_node img {
+        float: left;
+        width: 350px;
+        height: 260px; }
+      #new .new_cont .new_bottom .new_bottom_node .new_node_txt {
+        float: left;
+        padding-top: 65px;
+        text-align: center;
+        width: 230px;
+        height: 262px; }
+        #new .new_cont .new_bottom .new_bottom_node .new_node_txt h2 {
+          font-size: 20px;
+          color: #e93b78;
+          line-height: 20px;
+          margin-bottom: 12px; }
+        #new .new_cont .new_bottom .new_bottom_node .new_node_txt p {
+          text-align: center; }
+          #new .new_cont .new_bottom .new_bottom_node .new_node_txt p:nth-of-type(2) {
+            font-size: 16px;
+            color: #5a5a5a;
+            margin-bottom: 12px; }
+          #new .new_cont .new_bottom .new_bottom_node .new_node_txt p:nth-of-type(3) {
+            font-size: 12px;
+            color: #5a5a5a; }
+          #new .new_cont .new_bottom .new_bottom_node .new_node_txt p:last-child {
+            width: 108px;
+            height: 32px;
+            background: #e93b78;
+            color: #fff;
+            line-height: 32px;
+            font-size: 16px;
+            margin-left: 64px; }
+      #new .new_cont .new_bottom .new_bottom_node:nth-child(2n) {
+        margin-right: 0; }

@@ -1,0 +1,155 @@
+@import "public";
+/*banner*/
+#banner{
+    width:100%;
+    overflow:hidden;
+    position: relative;
+    .banner_cont{
+        height:450px;
+        position:relative;
+        img{
+             @include position;
+            left:50%;
+            top:50%;
+            margin-left:-960px;
+            margin-top:-220px;
+           
+        }
+    }
+    .banner_node{
+        width:100%;
+        background:#ececec;
+        opacity: 0.8;
+        height:30px;
+        @include position;
+        bottom:0;
+        padding-left:30px;
+        div{
+            float:left;
+            font-size:$fontsize;
+            color:#999;
+            @include linheight(30px);
+            &:first-child{
+                color:#fa3778;
+                font-weight: bold;
+                margin-right:27px;
+                i{
+                    margin-right:4px;
+                }
+            }
+        }
+    }
+}
+/*recommend*/
+#recommend{
+    min-height:320px;
+    background: #f2f2f2;
+    .recommend_cont{
+        padding-top:20px;
+        border-bottom:1px solid #eeeeee;
+        .recommend_img{
+            min-height:208px;
+            img{
+                float:left;
+                margin-right:15px;
+                @include WidthHeight(380px,180px);
+                @include cursor;
+            }
+        }
+        .recommend_node{
+            min-height:69px;
+            div{
+                float:left;
+                width:155px;
+                margin-right:95px;
+                img{
+                    display: block;
+                    float:left;
+                    margin-right:10px;
+                    @include WidthHeight(25px,25px);
+                }
+                p{
+                    float:left;
+                    width:120px;
+                    span{
+                        display: block;
+                        font-size: $fontsize;
+                        color:#999;
+                        @include linheight(12px);
+                        &:first-child{
+                            font-size: 16px;
+                            color:#222;
+                            margin-bottom:10px;
+                            @include linheight(14px);
+                            
+                        }
+                    }
+                }
+                &:last-child{
+                    margin:0;
+                }
+            }
+        }
+    }
+}
+/*new*/
+#new{
+    background:#f2f2f2;
+    .new_cont{
+        .new_top{
+            min-height:52px;
+            background:url('../../images/must_check.png') no-repeat;
+        }
+        .new_bottom{
+            padding-bottom:42px;
+            .new_bottom_node{
+                @include WidthHeight(580px,260px);
+                box-shadow: 2px 4px 5px 1px #ddd8d8;
+                background:#fff;
+                margin-right:12px;
+                margin-bottom:17px;
+                float:left;
+                img{
+                    float:left;
+                    @include WidthHeight(350px,260px);
+                }
+                .new_node_txt{
+                    float:left;
+                    padding-top:65px;
+                    text-align: center;
+                    @include WidthHeight(230px,262px);
+                    h2{
+                        font-size: 20px;
+                        color:#e93b78;
+                        @include linheight(20px);
+                        margin-bottom:12px; 
+                    }
+                    p{
+                        text-align:center; 
+                        &:nth-of-type(2){
+                             font-size: 16px;
+                             color:#5a5a5a;  
+                             margin-bottom:12px;
+                             
+                        }
+                        &:nth-of-type(3){
+                            font-size: $fontsize;
+                            color:#5a5a5a;
+                        }
+                        &:last-child{
+                            @include WidthHeight(108px,32px);
+                            background:#e93b78;
+                            color:#fff;
+                            @include linheight(32px);
+                            font-size:16px;
+                            margin-left:64px;
+                        }
+                    }
+                }
+                &:nth-child(2n){
+                    margin-right:0;
+                }
+            }
+        }
+    }
+}

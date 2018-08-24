@@ -1,0 +1,446 @@
+@charset 'utf-8';
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:16px;font-weight:normal;}
+ul,ol,li{list-style:none;}
+b,strong{font-weight:normal;}
+em,i{font-style:normal;}
+a,u{text-decoration: none;}
+img{border:0;display:block;}
+input{outline:none;}
+.clear_fix:after{content:'.';display:block;clear:both;height:0;overflow: hidden;visibility: hidden;}
+.clear_fix{zoom:1;}
+body{
+//  overflow: hidden;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+$fontsize:12px;
+@mixin linheight($lineheight){
+    line-height:$lineheight;
+}
+@mixin WidthHeight($width,$height){
+    width:$width;
+    height:$height;
+}
+@mixin MarginPadding($margin,$padding){
+    margin:$margin;
+    padding:$padding;
+}
+@mixin position{
+    position:absolute;
+}
+@mixin cursor{
+    cursor: pointer;
+}
+@mixin public{
+    width:1192px;
+    margin:0 auto
+}
+.header_cont,.nav_cont,.banner_cont,.recommend_cont,.new_cont{
+    @include public;
+}
+#header{
+    height: 33px;
+    background:#f2f2f2;
+    border-bottom: 1px solid #e5e5e5;
+    .header_left{
+        @include WidthHeight(210px,33px)
+        float:left;
+        @include linheight(33px);
+        span{
+            font-size:$fontsize;
+            color:#6c6c6c;
+            &:first-child{
+                margin-right:15px;
+            }
+            a{
+                color:#ec3e7d;
+                text-decoration: underline;
+            }
+        }
+    }
+   .header_right{
+        float:right;
+        font-size: $fontsize;
+        color:#888888;
+        @include WidthHeight(680px,33px);
+        cursor: pointer;
+        .right_li{
+//          border: 1px solid #000000;
+            float:left;
+            height:33px;
+            @include linheight(33px);
+            @include MarginPadding(0, 0 12px 0);
+            position:relative;
+            &:first-child{
+                @include MarginPadding(0, 0 10px 0);
+                i:nth-of-type(1){
+                    color:#ec3e7d;
+                    font-size:16px;
+                    @include MarginPadding(2px 1px 0,0);
+                    font-weight: bold;
+                }
+                i:nth-of-type(2){
+                    display: block;
+                   float:right;
+                   margin-top:14px;
+                   margin-left:3px;
+                    @include WidthHeight(10px,6px);
+                   
+                    background:url('../../images/icon-jt.png') no-repeat -34px 0;
+                }
+                .right_1{
+                    @include position;
+                     left:0px;
+                     box-shadow: 2px 4px 6px 2px #CEC2C2;
+                    background: #fff;
+                     display: none;
+                    li{
+                        @include WidthHeight(89px,28px);
+                       
+                        @include linheight(28px);
+                        @include MarginPadding(0,0 0 0 15px);
+                        
+                    }
+                }
+            }
+            &:nth-child(2){
+                i:nth-of-type(1){
+                    color:#ec3e7d;
+                    font-size:14px;
+                    @include MarginPadding(2px 2px 0,0);
+                    font-weight: bold;
+                }
+                .right_2{
+                    @include position;
+                    box-shadow: 2px 4px 6px 2px #CEC2C2;
+                    left:-170px;
+                    background:#fff;
+                    padding:10px 50px 10px 80px;
+                     width:150px;
+                    display: none;
+                    li{
+                      width:130px;
+                      @include linheight(30px);
+                    }
+                }
+            }
+            &:nth-child(3){
+                i:first-child{
+                    color:#ec3e7d;
+                    font-size:14px;
+                    @include MarginPadding(2px 2px 0,0);
+                    font-weight: bold;
+                }
+            }
+            &:last-child{
+                i{
+                    display: block;
+                    @include WidthHeight(17px,15px);
+                    float:right;
+                    
+                    @include MarginPadding(8px 3px 0,0);
+                }
+                
+            }
+        }
+    }
+}
+.nav_cont{
+   font-size:$fontsize ;
+   min-height: 131px;
+   .nav_top{
+       @include MarginPadding(0,21px 0 0 0);
+       min-height: 74px;;
+        .logo{
+            float:left;
+            width:170px;
+            
+        }
+        .look_for{
+            float:left;
+            @include MarginPadding(0,0 0 0 230px);
+            @include WidthHeight(460px,36px);
+            .text{
+                float:left;
+                @include WidthHeight(345px,30px);
+                border:3px solid #ec3e7d;
+                color:#999;
+                padding-left:6px;
+            }
+            .sub{
+                float:left;
+                @include WidthHeight(92px,36px);
+                background:#ec3e7d;
+                color: #fff;
+                text-align: center;
+                @include linheight(30px);
+                border: 0;
+            }
+            p{
+                float:left;
+                color:#999;
+                height:30px;
+                @include linheight(30px);
+                @include cursor;
+                u{
+                    padding:0 10px 0;
+                    border-right:1px solid #999;
+                    &:first-child{
+                        padding-left:0;
+                    }
+                    &:last-child{
+                        border:0;
+                    }
+                }
+            }
+        }
+    }
+    .nav_bottom{
+        min-height:37px;
+        .nav_bottom_chose{
+            min-height:37px;
+            .nav_bottom_chose_li{
+                @include cursor;
+                float:left;
+                padding:0 17px 0 20px;
+                background:url('../../images/nav.jpg') no-repeat 0 12px;
+                @include linheight(37px);
+                text-align: center;
+                font-size: 16px;
+                position:relative;
+                &:first-child{
+                    width:190px;
+                    background:#333;
+                    color:#fff;
+                    text-align: left;
+                    padding:0;
+                    i{
+                        padding:0 16px 0;
+                    }
+                    .nav_bottom_classify{
+                         @include position;
+                         width:190px;
+                         z-index: 10000;
+                        li{
+                            height:51px;
+                            font-size:16px;
+                            @include linheight(54px);
+                            background:#fa3778;
+                            color:#fff;
+                            padding:0 14px 0;
+                            border-bottom: 1px dashed #fe7dab;
+                            position:relative;   
+                        }
+                        .nav_bottom_classify_face{
+                            u:first-of-type{
+                                font-size: 20px;
+                                padding-right:16px;
+                            }
+                            u:nth-of-type(2){
+                               position:absolute;
+                                left:150px;
+                                font-size: 20px;
+                                
+                            }
+                                .nav_bottom_box{
+                                    z-index: 1000;
+                                    display: none;
+                                    width:300px;
+                                    min-height:697px;
+                                    border:1px solid #fa3778;
+                                    @include position;
+                                    background:#fff;
+                                    left: 189px;
+                                    top:0;
+                                    padding-top:12px;
+                                    padding-left:30px;
+                                    div{
+                                        min-height:91px;
+                                        width:280px;
+                                        padding-top:10px;
+                                        padding-bottom:10px;
+                                        
+                                        h2{
+                                            font-size: 14px;
+                                            @include linheight(14px);
+                                            color:#555;
+                                            font-weight: bold;
+                                        }
+                                        p{
+                                            font-size:$fontsize;
+                                            color:#999;
+                                            @include linheight(24px);
+                                            margin-top:10px;
+                                            span{
+                                                margin-right:16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        .nav_bottom_classify_cosmetics{
+                            @extend .nav_bottom_classify_face;
+                            .cosmetics{
+                                display: none;
+                                min-height:240px;
+                                div{
+                                    min-height:60px;
+                                }
+                            }
+                        } 
+                        .nav_bottom_classify_perfume{
+                        @extend .nav_bottom_classify_face;
+                            .perfume{
+//                              display: block;
+                                min-height:100px;
+                                div{
+                                    min-height:66px;
+                                }
+                            }
+                        }  
+                        .nav_bottom_classify_health{
+                             @extend .nav_bottom_classify_face;
+                             .health{
+//                               display: block;
+                                 min-height: 128px;
+                                 div{
+                                     min-height:85px;
+                                 }
+                             }
+                        } 
+                        .nav_bottom_classify_slimming{
+                            @extend .nav_bottom_classify_face;
+                            .slimming{
+//                             display: block;
+                               min-height: 128px;
+                               div{
+                                   min-height: 85px;
+                               } 
+                            }
+                        }
+                        .nav_bottom_classify_person{
+                             @extend .nav_bottom_classify_face;
+                             .person{
+//                               display: block;
+                                 min-height: 198px;
+                                 div{
+                                     min-height:80px;
+                                 }
+                             }
+                        }
+                        .nav_bottom_classify_man{
+                            @extend .nav_bottom_classify_face;
+                            .man{
+//                              display: block;
+                                min-height:100px;
+                                div{
+                                   min-height: 60px;
+                                }
+                            }
+                        }
+                        .nav_bottom_classify_baby{
+                            @extend .nav_bottom_classify_face;
+                            .baby{
+//                              display: block;
+                                min-height:128px;
+                                div{
+                                    min-height: 88px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                &:nth-child(2){
+                    background:#fff;
+                }
+                &:nth-child(5){
+                    i{
+                        float:right;
+                        padding-top:10px;
+                        padding-left:4px;
+                    }
+                }
+                &:last-child{
+                    position: relative;
+                    .nav_bottom_brand{
+                        display: none;
+                        @include position;
+                        z-index: 1000;
+                        left:-100px;
+                        width:442px;
+                        min-height:268px;
+                        border:1px solid #bababa;
+                        border-top:0;
+                        text-align: left;
+                        font-size: $fontsize;
+                        .nav_bottom_top{
+                            font-weight: bold;
+                            background:#eee;
+                            min-height:27px;
+                            color:#ec6697;
+                            padding-left:25px;
+                            padding-top:10px;
+                            b{
+                                display: block;
+                                @include position;
+                                top:-18px;
+                                left:140px;
+                                border:9px solid transparent;
+                                border-left-color:transparent;
+                                border-bottom-color:#eee;
+                                border-right-color:transparent;
+                            }
+                        }
+                        .nav_bottom_brand_bottom{
+                            
+                            .brand_text{
+                                float:left;
+                                width:200px;
+                                min-height:238px;
+                                padding-left:25px;
+                                padding-right:12px;
+                                p{
+                                    min-height:37px;
+                                    @include linheight(37px);
+                                    &:last-child{
+                                        font-size: 14px;
+                                        text-align: center;
+                                        font-weight: bold;
+                                        border-top:1px dashed #ddd;
+                                    }
+                                }
+                            }
+                            .brand_img{
+                                float:right;
+                                width:199px;
+                                min-height:238px;
+                                div{
+                                    @include WidthHeight(97px,73px);
+                                    padding-top:10px;
+                                    float:left;
+                                    border-left:1px dashed #ddd;
+                                    border-bottom:1px dashed #ddd;
+                                }
+                            }
+                            
+                        }
+                    }
+                    i{
+                        background:url('../../images/arrs.gif') no-repeat 0 -88px;
+                        display: block;
+                        float:right;
+                        margin-top:16px;
+                        margin-left:4px;
+                        @include WidthHeight(8px,6px);
+                    }
+               
+                }
+            }
+        }
+    }
+}
+
