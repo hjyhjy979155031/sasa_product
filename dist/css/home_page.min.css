@@ -94,12 +94,15 @@ html, body {
           background: url("../../images/icon-jt.png") no-repeat -34px 0; }
         #header .header_right .right_li:first-child .right_1 {
           position: absolute;
+          z-index: 10000;
           left: 0px;
+          top: 33px;
           box-shadow: 2px 4px 6px 2px #CEC2C2;
           background: #fff;
-          display: none; }
+          display: none;
+          height: 0; }
           #header .header_right .right_li:first-child .right_1 li {
-            width: 89px;
+            width: 88px;
             min-height: 28px;
             line-height: 28px;
             margin: 0;
@@ -115,9 +118,11 @@ html, body {
         box-shadow: 2px 4px 6px 2px #CEC2C2;
         left: -170px;
         background: #fff;
-        padding: 10px 50px 10px 80px;
+        padding: 10px 40px 10px 80px;
         width: 150px;
-        display: none; }
+        display: none;
+        height: 0;
+        z-index: 10000; }
         #header .header_right .right_li:nth-child(2) .right_2 li {
           width: 130px;
           line-height: 30px; }
@@ -127,13 +132,26 @@ html, body {
         margin: 2px 2px 0;
         padding: 0;
         font-weight: bold; }
-      #header .header_right .right_li:last-child i {
-        display: block;
-        width: 17px;
-        min-height: 15px;
-        float: right;
-        margin: 8px 3px 0;
-        padding: 0; }
+      #header .header_right .right_li:last-child {
+        position: relative; }
+        #header .header_right .right_li:last-child i {
+          display: block;
+          width: 17px;
+          min-height: 15px;
+          float: right;
+          margin: 8px 3px 0;
+          padding: 0; }
+        #header .header_right .right_li:last-child .header_QR {
+          display: none;
+          position: absolute;
+          width: 100px;
+          min-height: 100px;
+          box-shadow: 2px 4px 6px 2px #CEC2C2; }
+          #header .header_right .right_li:last-child .header_QR img {
+            width: 87px;
+            min-height: 87px;
+            margin-top: 6px;
+            margin-left: 6px; }
 
 .nav_cont {
   font-size: 12px;
@@ -466,7 +484,7 @@ html, body {
     font-size: 14px;
     color: #fff;
     top: 0;
-    left: -91px;
+    left: -110px;
     background: #494949;
     text-align: center;
     line-height: 39px; }
@@ -483,6 +501,7 @@ html, body {
     border-bottom: 1px solid #666;
     position: relative; }
     .shopmas .shopmas_top span {
+      cursor: pointer;
       display: block;
       width: 37px;
       min-height: 30px;
@@ -498,6 +517,7 @@ html, body {
     padding-top: 50%; }
     .shopmas .shopmas_center span {
       display: block;
+      cursor: pointer;
       padding: 0 27% 0; }
       .shopmas .shopmas_center span:first-child {
         font-size: 20px;
@@ -526,6 +546,7 @@ html, body {
     .shopmas .shopmas_bottom .shopmas_love {
       height: 25%; }
       .shopmas .shopmas_bottom .shopmas_love span {
+        cursor: pointer;
         display: block;
         width: 37px;
         min-height: 30px;
@@ -542,6 +563,7 @@ html, body {
       position: absolute;
       top: 88%; }
       .shopmas .shopmas_bottom .shopmas_sever span {
+        cursor: pointer;
         display: block;
         width: 37px;
         min-height: 30px;
@@ -558,7 +580,7 @@ html, body {
             width: 141px;
             min-height: 133px;
             background: #fff;
-            left: -141px;
+            left: -161px;
             top: -70px; }
             .shopmas .shopmas_bottom .shopmas_sever span:nth-child(2) .shopmas_hint img {
               width: 96px;
@@ -596,12 +618,14 @@ html, body {
 .smallnav {
   width: 56px;
   min-height: 220px;
+  cursor: pointer;
   position: absolute;
   top: 990px;
-  color: #fff;
-  background: #e93b78;
+  color: #e93b78;
+  background: #fff;
   font-weight: bold;
-  left: -46px; }
+  left: -46px;
+  opacity: 1; }
   .smallnav p {
     height: 45px;
     border-bottom: 1px solid #f2f2f2;
@@ -612,7 +636,6 @@ html, body {
       font-size: 12px; }
       .smallnav p span:first-child {
         font-size: 20px;
-        color: #fff;
         margin-bottom: 0; }
 
 /*banner*/
@@ -622,13 +645,32 @@ html, body {
   position: relative; }
   #banner .banner_cont {
     height: 450px;
-    position: relative; }
+    position: relative;
+    cursor: pointer; }
     #banner .banner_cont img {
       position: absolute;
       left: 50%;
       top: 50%;
       margin-left: -960px;
-      margin-top: -220px; }
+      margin-top: -220px;
+      cursor: pointer; }
+    #banner .banner_cont .banner_chose {
+      min-height: 25px;
+      text-align: center;
+      position: absolute;
+      top: 390px;
+      width: 100%;
+      padding-top: 5px;
+      padding-left: 570px; }
+      #banner .banner_cont .banner_chose .slide_box {
+        display: block;
+        margin-right: 10px;
+        float: left;
+        width: 18px;
+        min-height: 18px;
+        background: #acaaab;
+        border: 3px solid #e5e4e5;
+        border-radius: 14px; }
   #banner .banner_node {
     width: 100%;
     background: #ececec;
@@ -703,11 +745,11 @@ html, body {
     #new .new_cont .new_bottom .new_bottom_node {
       width: 580px;
       min-height: 260px;
-      box-shadow: 2px 4px 5px 1px #ddd8d8;
       background: #fff;
       margin-right: 12px;
       margin-bottom: 17px;
-      float: left; }
+      float: left;
+      cursor: pointer; }
       #new .new_cont .new_bottom .new_bottom_node img {
         float: left;
         width: 350px;
@@ -764,7 +806,7 @@ html, body {
       background: #fff;
       position: relative;
       margin-bottom: 25px;
-      box-shadow: 2px 4px 5px 1px #ddd8d8; }
+      cursor: pointer; }
       #rushBuying .rushBuying_cont .rushBuying_node img {
         width: 600px;
         min-height: 361px;
@@ -946,6 +988,7 @@ html, body {
       min-height: 51px;
       background: url("../../images/title_ranking.png") no-repeat; }
     #newArrival .newArrival_cont .newArrival_node .newArrival_node_txt {
+      border: 1px solid transparent;
       width: 270px;
       min-height: 368px;
       background: #fff;
@@ -974,7 +1017,7 @@ html, body {
           font-size: 12px;
           color: #666; }
       #newArrival .newArrival_cont .newArrival_node .newArrival_node_txt .newArrival_txt_img img {
-        width: 270px;
+        width: 268px;
         min-height: 280px; }
       #newArrival .newArrival_cont .newArrival_node .newArrival_node_txt .newArrival_txt {
         min-height: 86px; }

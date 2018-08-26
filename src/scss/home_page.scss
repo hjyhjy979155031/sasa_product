@@ -7,13 +7,33 @@
     .banner_cont{
         height:450px;
         position:relative;
+         @include cursor;
         img{
-             @include position;
+            @include position;
             left:50%;
             top:50%;
             margin-left:-960px;
             margin-top:-220px;
-           
+            @include cursor;
+        }
+        .banner_chose{
+            min-height:25px;
+//          background:pink;
+            text-align: center;
+            @include position;
+            top:390px;
+            width:100%;
+            padding-top:5px;
+            padding-left:570px;
+            .slide_box{
+                display: block;
+                margin-right:10px;
+                float:left;
+                @include WidthHeight(18px,18px);
+                background:#acaaab;
+                border:3px solid #e5e4e5;
+                border-radius: 14px;
+            }
         }
     }
     .banner_node{
@@ -104,11 +124,12 @@
             padding-bottom:42px;
             .new_bottom_node{
                 @include WidthHeight(580px,260px);
-                box-shadow: 2px 4px 5px 1px #ddd8d8;
+//              box-shadow: 2px 4px 5px 1px #ddd8d8;
                 background:#fff;
                 margin-right:12px;
                 margin-bottom:17px;
                 float:left;
+                @include cursor;
                 img{
                     float:left;
                     @include WidthHeight(350px,260px);
@@ -174,7 +195,8 @@
             background:#fff;
              position: relative;
              margin-bottom: 25px;
-             box-shadow: 2px 4px 5px 1px #ddd8d8;
+             @include cursor;
+//           box-shadow: 2px 4px 5px 1px #ddd8d8;
             img{
                 @include WidthHeight(600px,361px);
                 float:left;
@@ -412,6 +434,7 @@
         }
         .newArrival_node{
                 .newArrival_node_txt{
+                    border:1px solid transparent;
                     @include WidthHeight(270px,368px);
                     background:#fff;
                     position: relative;
@@ -441,7 +464,7 @@
                     }
                     .newArrival_txt_img{
                         img{
-                            @include WidthHeight(270px,280px);
+                            @include WidthHeight(268px,280px);
 
                         }
                     }

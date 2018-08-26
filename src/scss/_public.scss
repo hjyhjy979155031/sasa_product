@@ -93,12 +93,15 @@ $fontsize:12px;
                 }
                 .right_1{
                     @include position;
+                    z-index: 10000;
                      left:0px;
+                     top:33px;
                      box-shadow: 2px 4px 6px 2px #CEC2C2;
-                    background: #fff;
-                     display: none;
+                       background: #fff;
+                       display: none;
+                        height:0;
                     li{
-                        @include WidthHeight(89px,28px);
+                        @include WidthHeight(88px,28px);
                        
                         @include linheight(28px);
                         @include MarginPadding(0,0 0 0 15px);
@@ -118,9 +121,12 @@ $fontsize:12px;
                     box-shadow: 2px 4px 6px 2px #CEC2C2;
                     left:-170px;
                     background:#fff;
-                    padding:10px 50px 10px 80px;
-                     width:150px;
+                    padding:10px 40px 10px 80px;
+                    width:150px;
                     display: none;
+                    height:0;
+                    
+                    z-index: 10000;
                     li{
                       width:130px;
                       @include linheight(30px);
@@ -136,12 +142,24 @@ $fontsize:12px;
                 }
             }
             &:last-child{
+                position: relative;
                 i{
                     display: block;
                     @include WidthHeight(17px,15px);
                     float:right;
                     
                     @include MarginPadding(8px 3px 0,0);
+                }
+                .header_QR{
+                    display: none;
+                    @include position;
+                    @include WidthHeight(100px,100px);
+                    box-shadow: 2px 4px 6px 2px #CEC2C2;
+                    img{
+                        @include WidthHeight(87px,87px);
+                        margin-top:6px;
+                        margin-left:6px;
+                    }
                 }
                 
             }
@@ -578,13 +596,14 @@ $fontsize:12px;
     right:0;
     background:#4c4c4c;
     .shopmas_hint{
-        display: none;
+        display:none;
+//      opacity: 0;
                 @include position;
                 @include WidthHeight(91px,39px);
                 font-size: 14px;
                 color:#fff;
                 top:0;
-                left:-91px;
+                left:-110px;
                 background:#494949;
                 text-align: center;
                 @include linheight(39px);
@@ -603,6 +622,7 @@ $fontsize:12px;
         border-bottom: 1px solid #666;
         position:relative;
         span{
+            @include cursor;
             display: block;
             @include WidthHeight(37px,30px);
             color:#be9059;
@@ -620,7 +640,7 @@ $fontsize:12px;
         padding-top:50%;
         span{
             display:block; 
-           
+            @include cursor;
             padding:0 27% 0;
             &:first-child{
                 font-size: 20px;
@@ -654,6 +674,7 @@ $fontsize:12px;
 //          @include position;
             height:25%;
             span{
+                @include cursor;
                 display: block;
                 @include WidthHeight(37px,30px); 
                 color:#be9059;
@@ -675,6 +696,7 @@ $fontsize:12px;
             @include position;
             top:88%;
             span{
+                @include cursor;
                 display: block;
                 @include WidthHeight(37px,30px); 
                 color:#be9059;
@@ -693,7 +715,7 @@ $fontsize:12px;
                     .shopmas_hint{
                         @include WidthHeight(141px,133px);
                         background:#fff;
-                       left:-141px;
+                       left:-161px;
                        top:-70px;
                        img{
                            @include WidthHeight(96px,96px);
@@ -741,12 +763,14 @@ $fontsize:12px;
 /*smallnav*/
 .smallnav{
     @include WidthHeight(56px,220px);
+    @include cursor;
     position: absolute;
     top:990px;
-    color:#fff;
-    background:#e93b78;
+    color:#e93b78;
+    background:#fff;
     font-weight: bold;
     left:-46px;
+    opacity:1;
     p{
         height:45px;
         border-bottom:1px solid #f2f2f2;
@@ -757,9 +781,18 @@ $fontsize:12px;
             font-size: $fontsize;
             &:first-child{
                 font-size: 20px;
-                color:#fff;
                 margin-bottom:0;
+               
             }
         }
+//      &:first-child{
+//          background:#e93b78;
+//          color:#fff;
+////          span{
+////              &:first-child{
+////                   color:#fff;
+////              }
+////          }
+//      }
     }
 }
