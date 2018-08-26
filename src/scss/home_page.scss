@@ -7,7 +7,6 @@
     .banner_cont{
         height:450px;
         position:relative;
-         @include cursor;
         img{
             @include position;
             left:50%;
@@ -39,7 +38,6 @@
     .banner_node{
         width:100%;
         background:#ececec;
-        opacity: 0.8;
         height:30px;
         @include position;
         bottom:0;
@@ -47,7 +45,7 @@
         div{
             float:left;
             font-size:$fontsize;
-            color:#999;
+            color:#737373;
             @include linheight(30px);
             &:first-child{
                 color:#fa3778;
@@ -57,7 +55,15 @@
                     margin-right:4px;
                 }
             }
+            
         }
+        .banner_node_txt{
+                @include position;
+                top:0px;
+                left:100px;
+                @include cursor;
+                
+            }
     }
 }
 /*recommend*/
@@ -182,7 +188,7 @@
         padding-bottom: 38px;
         .rushBuying_top{
             min-height:83px;
-            background:url('../../images/must_check.png') no-repeat;
+            background:url('../../images/limitted_offer.png') no-repeat;
             h2{
                 font-size: 20px;
                 color: #3e3e3e;
@@ -430,7 +436,7 @@
         @include public;
         .newArrival_top{
             min-height:51px;
-            background:url('../../images/title_ranking.png') no-repeat;
+            background:url('../../images/new_arrival.png') no-repeat;
         }
         .newArrival_node{
                 .newArrival_node_txt{

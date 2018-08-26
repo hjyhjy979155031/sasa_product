@@ -171,11 +171,10 @@ $fontsize:12px;
    min-height: 131px;
    .nav_top{
        @include MarginPadding(0,21px 0 0 0);
-       min-height: 74px;;
+       min-height: 74px;
         .logo{
             float:left;
             width:170px;
-            
         }
         .look_for{
             float:left;
@@ -185,7 +184,8 @@ $fontsize:12px;
                 float:left;
                 @include WidthHeight(345px,30px);
                 border:3px solid #ec3e7d;
-                color:#999;
+                color:#222;
+                font-size:16px;
                 padding-left:6px;
             }
             .sub{
@@ -272,7 +272,7 @@ $fontsize:12px;
                                     @include position;
                                     background:#fff;
                                     left: 189px;
-                                    top:0;
+                                    top:-1px;
                                     padding-top:12px;
                                     padding-left:30px;
                                     div{
@@ -296,6 +296,14 @@ $fontsize:12px;
                                                 margin-right:16px;
                                             }
                                         }
+                                    }
+                                    u{
+                                        display: block;
+                                        @include position;
+                                        @include WidthHeight(15px,51px);
+                                        background:#fff;
+                                        left:-5px;
+                                        top:0px;
                                     }
                                 }
                             }
@@ -385,10 +393,11 @@ $fontsize:12px;
                 &:last-child{
                     position: relative;
                     .nav_bottom_brand{
+                        background: #fff;
                         display: none;
                         @include position;
                         z-index: 1000;
-                        left:-100px;
+                        left:-130px;
                         width:442px;
                         min-height:268px;
                         border:1px solid #bababa;
@@ -406,7 +415,7 @@ $fontsize:12px;
                                 display: block;
                                 @include position;
                                 top:-18px;
-                                left:140px;
+                                left:170px;
                                 border:9px solid transparent;
                                 border-left-color:transparent;
                                 border-bottom-color:#eee;
@@ -421,6 +430,7 @@ $fontsize:12px;
                                 min-height:238px;
                                 padding-left:25px;
                                 padding-right:12px;
+                                color:#222;
                                 p{
                                     min-height:37px;
                                     @include linheight(37px);

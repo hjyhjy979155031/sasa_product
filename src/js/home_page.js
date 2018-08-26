@@ -149,10 +149,26 @@ $(function(){
 			$(this).css('color','#555')
 		}
 	})
-	
+	$('.nav_bottom_chose').children().eq(7).bind({
+		'mouseenter' : function(){
+			$(this).children().eq(1).css('display','block')
+		},
+		'mouseleave' : function(){
+			$(this).children().eq(1).css('display','none');
+			
+		}
+	})
+	$('.brand_text').on({
+		'mouseenter' : function(){
+				$(this).css('color','#fa3778')
+		},
+		'mouseleave' : function(){
+				$(this).css('color','#222')
+		}
+	},'p')
 	//轮播图
 	let timer = null;
-	let index = 0;
+	let index = 1;
 	autoSlideShow();
 	//按圆点改变图片
 	$.getJSON('json/slideShow.json',function(json){
@@ -165,11 +181,12 @@ $(function(){
 		for(let i = 0;i < slideshowlen;i ++){
 			$slidebox = `<span class = 'slide_box' index = ${i}></span>`
 			$('.banner_chose').append($slidebox);
+			autoChange();
 			$('.banner_chose .slide_box').bind({
 				'mouseenter' : function(){
 			$(this).css({'background':'#fa3778','border-color':'#fec3d7'});
 //			console.log($(this).attr("index"))
-			index = parseInt( $(this).attr("index")) +1;
+			index = parseInt( $(this).attr("index")) + 1;
 //			console.log(index);
 			slideShow();
 			autoChange();
@@ -187,19 +204,22 @@ $(function(){
 	function slideShow(){
 		$.getJSON('json/slideShow.json',function(json){
 			if(index > Object.keys(json).length){
-			index = 0;
+			index = 1;
 		}
-//			console.log(json[indexA]);
-			$('.banner_cont img').attr('src',json['img' + index])
+			$('.banner_cont img').attr('src',json['img' + index]);
+			$('.banner_cont img').css('opacity','0.3');
+			$('.banner_cont img').animate({
+				opacity : '1'
+			},500);
+			autoChange();
+			async:false;
 		})
-		
 	}
 	//自动轮播
 	function autoSlideShow(){
 		timer = setInterval(function(){
-			index++;
+			index ++;
 			slideShow();
-//console.log($('.banner_chose').children().eq(1).attr('index'))
 			autoChange();
 		},3000)
 	}
@@ -219,13 +239,57 @@ $(function(){
 			}
 		for(let i = 0;i < $('.banner_chose').children().length;i ++){
 			
-				if($('.banner_chose').children().eq(i).attr('index') == index - 1){
+				if($('.banner_chose').children().eq(i).attr('index') == index -1){
 					$('.banner_chose').children().eq(i).css({'background':'#fa3778','border-color':'#fec3d7'})
 				}	
 		}
 	}
+//公告
+let nodeindex = 1;
+nodeslide();
+function nodehtml(){
+	$.getJSON('json/node.json',function(json){
+	if(nodeindex > Object.keys(json).length){
+		nodeindex = 1;
+	}
+	$('.banner_node').children().eq(1).animate({
+		opacity : 0,
+		top : '-10px'
+	},1000,function(){
+		$('.banner_node').children().eq(1).remove();
+		if(json['node' + index] == undefined){
+			json['node' + index] = '欢迎光临莎莎网，这里有你想有的一切'
+		}
+		$node = `<div class='banner_node_txt'>${json['node'+index]}</div>`;
+		if(json['node' + index] == undefined){
+			json['node' + index] = '下一条'
+		}
+	$('.banner_node').append($node);
 	
+	})	;
+	async:false
+})
+}
+
+function nodeslide(){
 	
+	timers = setInterval(function(){
+   		nodehtml();
+    	nodeindex ++;
+   },4000)
+}  
+//鼠标滑过停止播放 改变颜色
+$('.banner_node').bind({
+	'mouseenter' : function(){
+		clearInterval(timers)
+		$(this).children().eq(1).css('color','#fa3778')
+	},
+	'mouseleave' : function(){
+		nodeslide();
+		$(this).children().eq(1).css('color','#737373')
+	}
+})
+ 
 	//推荐划过效果
 	$('.recommend_img').on({
 		'mouseenter' : function(){
@@ -288,22 +352,14 @@ for(let i = 0;i < $('.rushBuying_node').children().length;i ++){
 //新品划过效果
 $('.newArrival_node_txt').bind({
 	'mouseenter' : function(){
-//		$(this).animate({
-//			border:'1px solid #fa3778'
-//		},30)
 		$(this).css('border-color','#fa3778')
 	},
 	'mouseleave' : function(){
-//		$(this).animate({
-//			border:'1px solid #fff'
-//			},500)
 		$(this).css('border-color','transparent')
 	}
 })
 
 //左侧导航条效果
-//$('.shopmas_top').children().eq(0)
-
 shopmas($('.shopmas_top').children().eq(0))
 shopmas($('.shopmas_love').children().eq(0))
 shopmas($('.shopmas_love').children().eq(1))
@@ -363,7 +419,6 @@ $(window).scroll(function(){
 let scrolltop = document.documentElement.scrollTop;
 //记录当前所在的值
 let index = 0;
-indexA = 0;
 //当到达一定值后改变定位
 	if(scrolltop < $('#new').offset().top){
 		$('.smallnav').css({
@@ -383,6 +438,7 @@ indexA = 0;
 		index = 0;
 		scorll(index)
 	}
+	//根据滚动条改变当前导航条的颜色
 	if(scrolltop >= $('#rushBuying').offset().top && scrolltop < $('#ranking').offset().top){
 		index = 1;
 		scorll(index);
@@ -393,8 +449,10 @@ indexA = 0;
 	}
 	if(scrolltop >= $('#newArrival').offset().top){
 		index = 2;
-		$('.smallnav').css('display','none')
+		$('.smallnav').css('display','none');
+		scroll(index);
 	}
+	//划入导航栏中的选项改变颜色 
 	$('.smallnav').on({
 	'mouseenter' : function(){
 		$(this).css({
@@ -408,24 +466,10 @@ indexA = 0;
 			color : '#e93b78'
 		});
 		scorll(index)
-	},
-	'click' : function(){
-		index = $(this).index();
-		if(index == 0){
-		indexA = $('#new').offset().top;
-		}else if(index == 1){
-			indexA =  $('#rushBuying').offset().top;
-		}else if(index == 2){
-			indexA = $('#newArrival').offset().top;
-		}else if(index ==3){
-			indexA = $('#ranking').offset().top;
-		}
-		document.documentElement.scrollTop = indexA;
 	}
 },'p')
 })
-console.log(index)
-//滚动条滑动改变侧导航条
+//当前导航条的颜色
 function scorll(index){
 		$('.smallnav').css('display','block')
 		for(let i =0;i < $('.smallnav').children().length;i ++){
@@ -439,7 +483,7 @@ function scorll(index){
 			color : '#fff'
 		})
 }
-//出现导航条 点击导航条时
+//划入出现滚动条 画出滚动条隐藏
 $('.smallnav').bind({
 	'mouseenter' : function(){
 		$(this).animate({
@@ -452,5 +496,23 @@ $('.smallnav').bind({
 		},500)
 	}
 })
-
+//点击导航条改变当前滚动条的位置
+$('.smallnav').on({
+	'click' : function(){
+		index = $(this).index();
+		if(index == 0){
+		indexA = $('#new').offset().top;
+		}else if(index == 1){
+			indexA =  $('#rushBuying').offset().top;
+		}else if(index == 2){
+			indexA = $('#newArrival').offset().top;
+		}else if(index ==3){
+			indexA = $('#ranking').offset().top;
+		}
+		console.log(indexA)
+		$('html,body').animate({
+			scrollTop :indexA
+		},800)
+	}
+},'p')
 })
