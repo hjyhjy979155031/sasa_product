@@ -508,6 +508,7 @@
                                 @include WidthHeight(225px,44px);
                                 background:#ec3e7d;
                                 text-align: center;
+                                @include cursor;
                                 @include linheight(44px);
                                 color:#fff;
                                 @include position;

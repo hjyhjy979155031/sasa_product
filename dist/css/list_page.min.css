@@ -1252,6 +1252,7 @@ html, body {
                     min-height: 44px;
                     background: #ec3e7d;
                     text-align: center;
+                    cursor: pointer;
                     line-height: 44px;
                     color: #fff;
                     position: absolute;
