@@ -7,9 +7,12 @@ var babel = require("gulp-babel");
 gulp.task('js',()=>{
 	gulp.src('./src/js/*.js').pipe(rename({
 		suffix:'.min'
-	})).pipe(babel({
+	}))
+	.pipe(babel({
 		presets:["env"]
-	})).pipe(uglify()).pipe(gulp.dest('dist/js'));
+	}))
+	.pipe(uglify())
+	.pipe(gulp.dest('dist/js'));
 })
 
 gulp.task('sass',()=>{
@@ -19,6 +22,6 @@ gulp.task('sass',()=>{
 })
 
 gulp.task('default',()=>{
-//	gulp.watch('./src/js/*.js',['js']);
+	gulp.watch('./src/js/*.js',['js']);
 	gulp.watch('./src/scss/*.scss',['sass']);
 })
