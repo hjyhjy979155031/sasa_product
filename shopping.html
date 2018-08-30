@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
+		<link rel="stylesheet" href="dist/css/shopping.min.css" />
+		<script src="dist/js/jquery-1.11.3.min.js"></script>
+		<script src="dist/js/jquery.cookie.min.js"> </script>
+		<script src="dist/js/public.min.js"></script>
+		<script src="dist/js/shopping.min.js"></script>
+	</head>
+	<body>
+		<!--header-->
+		<div id="header">
+			<div class="header_cont">
+				<p class="header_left">
+					<span>你好！185433520221</span>
+					<span><a href="javascript:;">积分</a><a href="javsacript:;">退出</a></span>
+				</p>
+				<ul class='header_right'>
+					<li class="right_li"><i class = "iconfont icon-denglu"></i>
+						我的账户
+						<i></i>
+						<ul class="right_1 clear_fix">
+							<li>我的订单</li>
+							<li>我的积分</li>
+							<li>我的优惠券</li>
+							<li>我的收藏</li>
+							<li>我的评价</li>
+						</ul>
+					</li>
+					<li class="right_li"><i class="iconfont icon-gouwuche"></i>
+						我的购物车
+						<ul class="right_2 clear_fix">
+							<li>购物车中还没有商品，快去挑选心爱的商品吧</li>
+						</ul>
+					</li>
+					<li class="right_li"><i class="iconfont icon-shoucang"></i>我的收藏</li>
+					<li class="right_li">我的站内信</li>
+					<li class="right_li">积分中心</li>
+					<li class="right_li">Global site</li>
+					<li class="right_li">关注我们
+						<div class="header_QR">
+						<img src="images/92916c648aa5518f6c52210ff2e8418eb3c750a0.jpg" alt="微信二维码" />	
+						</div>
+						<i><img src="images/weinxin.png" alt="" /></i>
+						<i><img src="images/weibo.png" alt="" /></i>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--shoppingTop-->
+		<div id="shoppingTop">
+			<div class="shoppingTop_cont">
+				<h1>
+					<img src="images/1115616d26bb4baa26c55bf0e172d0fd8dca963a.png" alt="" />
+				</h1>
+				<div class="shopp_river">
+					
+				</div>
+				<div class="shopp_ensure">
+					
+				</div>
+			</div>
+		</div>
+		<!--shoppingNode-->
+		<div class="shoppingNode">
+			<div class="shopp_empt">
+				<h2>亲，您的购物车中没有商品。</h2>
+				<h3>赶紧挑选心爱的商品吧</h3>
+			</div>
+			<div class="shopp_txt">
+				<div class="shopp_node">
+					
+  保税仓直送商品结帐提示 1. 保税仓直送商品不可与香港直送商品同时结帐; 2. 保税仓直送商品每张订单总金额不可超过 ¥2000。
+				</div>
+				<div class="shopp_title">
+					
+				</div>
+				<div class="shopp_product">
+					<p>
+						<span>国内保税仓</span>
+						<span>商品名称</span>
+						<span>单价</span>
+						<span>数量</span>
+						<span>小计</span>
+					</p>
+					<!--<p>
+						<span>
+							<img src="images/00780578f5f32408395f9e98be7293eeb7c05786.jpg" alt="" />
+						</span>
+						<span>
+							<u>资生堂夕颜专科 柔撤泡沫洁面乳</u>
+							<u>
+								120克
+							</u>
+						</span>
+						<span>
+							￥39.0
+						</span>
+						<span>
+							<u>-</u>
+							<input type="text" value='1'/>
+							<u>+</u>
+						</span>
+						<span>
+							￥39.0
+						</span>
+						<span>
+							删除
+						</span>
+					</p>-->
+				</div>
+				<div class="shopp_settle">
+					<p>
+						<span>已享受的优惠</span>
+						<span>优惠项目</span>
+					</p>
+					<p>
+						<span>继续购物</span>
+						<span>清空购物车</span>
+						<span>共<u>0</u>件商品</span>
+						<span>商品应付金额</span>
+						<span>￥0.0</span>
+						<span>结账</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--afterSale-->
+    <div id="afterSale">
+    	<div class="afterSale_cont">
+		<div class="afterSale_express clear_fix">
+			<div class="express_node clear_fix">
+				<div class="express_node_img">
+					
+				</div>
+				<div class="express_node_txt">
+					<p>香港特快直达</p>
+					<p>包税零扣关￥288免邮</p>
+				</div>
+			</div>
+			<div class="express_node clear_fix">
+				<div class="express_node_img">
+					
+				</div>
+				<div class="express_node_txt">
+					<p>正品保证</p>
+					<p>专业护肤20年</p>
+				</div>
+			</div>
+			<div class="express_node clear_fix">
+				<div class="express_node_img">
+					
+				</div>
+				<div class="express_node_txt">
+					<p>保税仓直达</p>
+					<p>包税零扣关￥168免邮</p>
+				</div>
+			</div>
+			<div class="express_node clear_fix">
+				<div class="express_node_img">
+					
+				</div>
+				<div class="express_node_txt">
+					<p>30天退换保证</p>
+					<p>为您提供售后无忧保障</p>
+				</div>
+			</div>
+			<div class="express_node clear_fix">
+				<div class="express_node_img">
+					
+				</div>
+				<div class="express_node_txt">
+					<p>香港上市</p>
+					<p>股票码HK00178</p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="afterSale_node clear_fix">
+			<div class="afterSale_node_txt">
+				<div class="afterSale_node_txt_top clear_fix">
+					<div class="node_txt">
+						<h2>新手上路</h2>
+						<p>常见的问题</p>
+						<p>购物流程</p>
+						<p>优惠卷说明</p>
+						<p>联系我们</p>
+						<p>常见问题</p>
+					</div>
+					<div class="node_txt">
+						<h2>付款方式</h2>
+						<p>在线支付</p>
+						<p>积分支付</p>
+					</div>
+					<div class="node_txt">
+						<h2>配送方式</h2>
+						<p>配送说明</p>
+						<p>追踪订单</p>
+					</div>
+					<div class="node_txt">
+						<h2>售后服务</h2>
+						<p>正品保证</p>
+						<p>价格承若</p>
+						<p>30天退换保证</p>
+						<p>退款程序</p>
+						<p>更改订单</p>
+					</div>
+					<div class="node_txt">
+						<h2>莎莎会员</h2>
+						<p>积分奖励</p>
+						<p>VIP会员计划</p>
+					</div>
+				</div>
+				<div class="afterSale_node_txt_img">
+					<img src="images/2ba94eca9ab1e31bff8edcc9a4d60e764f051972.jpg" alt="" />
+				</div>
+			</div>
+			<div class="afterSale_node_QRcode clear_fix">
+				<div class="QRcode weibo">
+					<img src="images/072b1d0568da15dca7f2e550962c8961400d4a5b.jpg" alt="" />
+					<p>莎莎官方微博@莎莎网</p>
+				</div>
+				<div class="QRcode weixin">
+					<img src="images/89a210b907bc83717620538e9c5e0a311ce320d7.jpg" alt="" />
+					<p>莎莎官方微信ID:hksasadotcom</p>
+				</div>
+			</div>
+		</div>
+	</div>
+    	
+    </div>
+		
+	
+	<!--footer-->
+	<div id="footer">
+		<div class="footer_cont">
+			<p>
+				<span>关于莎莎</span>
+				<span>使用条款</span>
+				<span>隐私策略</span>
+				<span>批发服务</span>
+				<span>招商合作</span>
+				<span>帮助中心</span>
+				<span>港澳店铺推广</span>
+				<span>人才招聘</span>
+				<span>联络我们</span>
+				<span>其他送货地区</span>
+			</p>
+			<p>
+				 Copyright 2000-2018 Sa Sa dot Com Limited  版权所有莎莎国际控股有限公司成员
+			</p>
+		</div>
+	</div>
+	<!--shoppmas-->
+	<div class="shopmas">
+		<div class="shopmas_top">
+			<span class="iconfont icon-denglu">
+				<div class="shopmas_hint user">我的账户<i></i></div>
+			</span>
+		</div>
+		<div class="shopmas_center">
+			<span class="iconfont icon-gouwuche"></span>
+			<span>购物车</span>
+			<span>0</span>
+		</div>
+		<div class="shopmas_bottom">
+			<div class="shopmas_love">
+				<span class="iconfont icon-shoucang">
+					<div class="shopmas_hint user">我的收藏<i></i></div>
+				</span>
+				<span class="iconfont icon-unie646">
+					<div class="shopmas_hint user">浏览记录<i></i></div>
+				</span>
+			</div>
+			<div class="shopmas_sever">
+				<span class="iconfont icon-unie646">
+					<div class="shopmas_hint user">在线客服<i></i></div>
+				</span>
+				<span class="iconfont icon-gouwuche">
+					<div class="shopmas_hint user">
+						<i></i>
+						<img src="images/92916c648aa5518f6c52210ff2e8418eb3c750a0.jpg" alt="" />
+						<u>莎莎官方微信ID:hksasadotcom</u>
+					</div>
+				</span>
+				<span><i></i>TOP</span>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

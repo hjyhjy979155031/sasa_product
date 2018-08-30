@@ -1,5 +1,12 @@
 
 	$(function(){
+		
+		if(!$.cookie('sasaproduct')){
+			gouwucnum();
+		}
+			
+		
+		
 		//头部导航条
 $('.header_right').on({
 		'mouseover' :function(){
@@ -221,4 +228,28 @@ $('.shopmas_sever').children().eq(2).click(function(){
 	document.documentElement.scrollTop = 0;
 })
 
+//点击购物车跳转到购物车页面
+	$('.shopmas_center').click(function(){
+		location.href = 'shopping.html'
+	})
+	
+//购物车数量
+function gouwucnum(){
+	var homcookiestr = $.cookie('sasaproduct') ? $.cookie('sasaproduct') : "";
+		
+		var homcookieobj = converStrToObj(homcookiestr);
+		console.log(homcookieobj)
+		var homenum = homcookieobj['rcx1'].num;
+    $('.shopmas_center').children().eq(2).html(homenum)
+}
+
+
+
+//将字符串转为对象
+	function converStrToObj(str){
+		if(!str){
+			return {};
+		}
+		return JSON.parse(str);
+	}
 	})

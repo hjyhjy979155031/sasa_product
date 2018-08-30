@@ -295,4 +295,9 @@ $('.smallnav').on({
 		},800)
 	}
 },'p')
+
+//点击跳转页面
+$('.nav_bottom_classify_face').find('div').find('p').children().eq(0).click(function(){
+	location.href = 'list_page.html'
+})
 })

@@ -187,5 +187,11 @@ $(function(){
 		
 	}
 
+//点击跳转页面
+
+$('.product_photo_bottom').children().eq(5).click(function(){
+	console.log($(this))
+	location.href = 'detail_page.html'
+})
 	
 })
