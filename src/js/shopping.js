@@ -1,8 +1,10 @@
 $(function(){
-	gouwucnum();
+
 	var sasaprostr = $.cookie('sasaproduct') ? $.cookie('sasaproduct') : "";
 	var sasaproobj = converStrToObj(sasaprostr);
-	if(sasaprostr == ""){
+	console.log(typeof sasaproobj['rcx1'])
+//	var sasaproductstr1 = JSON.stringify()
+	if(sasaproobj['rcx1'] == undefined){
 		$('.shopp_empt').css('display','block');
 		$('.shopp_txt').css('display','none')
 	}else{
@@ -10,7 +12,7 @@ $(function(){
 		$('.shopp_empt').css('display','none');
 		
 	}
-	console.log(sasaproobj["rcx1"])
+//	console.log(sasaproobj["rcx1"])
 	for(var i in sasaproobj){
 		var shoppPro = `
 	<p>
@@ -50,6 +52,7 @@ $(function(){
 	$('.shopp_product').children().eq(1).children().eq(4).html(shopmam);
 	//商品应付金额为小计价格
 	$('.shopp_settle').children().eq(1).children().eq(4).html('￥'+$('.shopp_product').children().eq(1).children().eq(4).html())
+		gouwucnum();
 	}
 	
 //	点击+cookie中数量增加 -减少
@@ -59,36 +62,50 @@ $(function(){
 		var shoppnananum = parseInt(sasaproobj["rcx1"].num);
 		shoppnananum++;
 		sasaproobj["rcx1"].num = shoppnananum ;
-
+		console.log(shoppnananum)
 		$.cookie('sasaproduct',JSON.stringify(sasaproobj))
 		console.log(sasaproobj["rcx1"].num)
 		$(this).prev().val(sasaproobj["rcx1"].num)
 		var shoppropre = sasaproobj["rcx1"].price;
 		$(this).parent().next().html(sasaproobj["rcx1"].num* parseInt(shoppropre.substring(1)))
 		//商品应付金额为小计价格
-	$('.shopp_settle').children().eq(1).children().eq(4).html('￥'+$('.shopp_product').children().eq(1).children().eq(4).html());
-	gouwucnum();
+		$('.shopp_settle').children().eq(1).children().eq(4).html('￥'+$('.shopp_product').children().eq(1).children().eq(4).html());
+		gouwucnum();
 		
 	})
 	$('.shopp_product').children().eq(1).children().eq(3).children().eq(0).click(function(){
-		gouwucnum();
 		var sasaprostr = $.cookie('sasaproduct') ? $.cookie('sasaproduct') : "";
 		var sasaproobj = converStrToObj(sasaprostr);
 		var shoppnananum = parseInt(sasaproobj["rcx1"].num);
 		shoppnananum--;
+		if(shoppnananum<=1){
+			shoppnananum=1;
+		}
 		sasaproobj["rcx1"].num = shoppnananum ;
-
-		$.cookie('sasaproduct',JSON.stringify(sasaproobj),{expires : 7,path : '/'})
+		console.log(shoppnananum)
+		$.cookie('sasaproduct',JSON.stringify(sasaproobj))
+		console.log(sasaproobj["rcx1"].num)
 		$(this).next().val(sasaproobj["rcx1"].num)
 		var shoppropre = sasaproobj["rcx1"].price;
 		$(this).parent().next().html(sasaproobj["rcx1"].num* parseInt(shoppropre.substring(1)))
 		//商品应付金额为小计价格
-	$('.shopp_settle').children().eq(1).children().eq(4).html('￥'+$('.shopp_product').children().eq(1).children().eq(4).html());
-	
+		$('.shopp_settle').children().eq(1).children().eq(4).html('￥'+$('.shopp_product').children().eq(1).children().eq(4).html());
+		gouwucnum();
 		
 	})
 	
-	
+	//点击删除
+	$('.shopp_product').children().eq(1).children().eq(5).click(function(){
+		var sasaprostr = $.cookie('sasaproduct') ? $.cookie('sasaproduct') : "";
+		var sasaproobj = converStrToObj(sasaprostr);
+		delete sasaproobj['rcx1'];
+		$.cookie('sasaproduct',JSON.stringify(sasaproobj));
+		$('.shopp_empt').css('display','block');
+		$('.shopp_txt').css('display','none')
+		console.log($.cookie('sasaproduct'));
+    	$('.shopmas_center').children().eq(2).html(0)
+		
+	})
 
 	
 	function converStrToObj(str){
@@ -101,9 +118,8 @@ $(function(){
 	//购物车数量
 function gouwucnum(){
 	var homcookiestr = $.cookie('sasaproduct') ? $.cookie('sasaproduct') : "";
-		
 		var homcookieobj = converStrToObj(homcookiestr);
-		console.log(homcookieobj)
+//		console.log(homcookieobj)
 		var homenum = homcookieobj['rcx1'].num;
 		var homeheji =  parseInt(homenum)* parseInt(homcookieobj['rcx1'].price.substring(1))    
     $('.shopmas_center').children().eq(2).html(homenum)

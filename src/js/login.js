@@ -1,6 +1,6 @@
 $(function(){
 	
-	var loginyanz = $('.login_node').find('form').children().eq(2).find('input');
+	var loginyanz1 = $('.login_node').find('form').children().eq(2).find('input');
 	var logindengl = $('.login_node').find('form').children().eq(4);
 	//弹出框点击确定消失
 		$('.register_cover').children().eq(1).click(function(){
@@ -9,8 +9,8 @@ $(function(){
 	})
 		
 	//验证码验证
-	loginyanz.blur(function(){
-		console.log($(this).next().html())
+	loginyanz1.blur(function(){
+//		console.log($(this).next().html())
 		if($(this).val()!= $(this).next().html()){
 			random();
 			$('.cont').css('display','block');
@@ -51,6 +51,7 @@ $(function(){
 	
 	
 	//随机数出现
+	var registr = '';
 	function random(){
 		var registernum = '123456789abcdefghijklmnopqrstuvwxyz';
 		var registr1 = '';
@@ -60,6 +61,7 @@ $(function(){
 		registr = registr1;
 		$('.login_node').find('form').children().eq(2).children().eq(1).html(registr)
 	}
+	
 	//cookie字符串转对象
 		function converStrToObj(str){
 		if(!str){

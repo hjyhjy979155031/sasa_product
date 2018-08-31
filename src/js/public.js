@@ -1,9 +1,9 @@
 
 	$(function(){
 		
-		if(!$.cookie('sasaproduct')){
-			gouwucnum();
-		}
+//		if(!$.cookie('sasaproduct')){
+//			gouwucnum();
+//		}
 			
 		
 		
@@ -234,14 +234,14 @@ $('.shopmas_sever').children().eq(2).click(function(){
 	})
 	
 //购物车数量
-function gouwucnum(){
-	var homcookiestr = $.cookie('sasaproduct') ? $.cookie('sasaproduct') : "";
-		
-		var homcookieobj = converStrToObj(homcookiestr);
-		console.log(homcookieobj)
-		var homenum = homcookieobj['rcx1'].num;
-    $('.shopmas_center').children().eq(2).html(homenum)
-}
+//function gouwucnum(){
+//	var homcookiestr = $.cookie('sasaproduct') ? $.cookie('sasaproduct') : "";
+//		
+//		var homcookieobj = converStrToObj(homcookiestr);
+//		console.log(homcookieobj)
+//		var homenum = homcookieobj['rcx1'].num;
+//  $('.shopmas_center').children().eq(2).html(homenum)
+//}
 
 
 

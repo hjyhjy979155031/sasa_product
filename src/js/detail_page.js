@@ -129,6 +129,7 @@ $(function(){
 
 		$.cookie('sasaproduct',JSON.stringify(cookieobj),{expires : 7,path : '/'});
 		gouwucnum()
+		console.log($.cookie())
 	})
 	
 	$('.detail_mag_txt_bottom').children().eq(2).children().eq(0).click(function(){
@@ -144,7 +145,7 @@ $(function(){
 		
 		var cookieobj = converStrToObj(cookiestr);
 		if(goodid in cookieobj){		
-			cookieobj[goodid].num = parseInt(cookieobj[goodid].num) + parseInt(goodnum);
+//			cookieobj[goodid].num = parseInt(cookieobj[goodid].num) + parseInt(goodnum);
 //			cookieobj[goodnum] += goodnum;
 			console.log(cookieobj[goodid])
 		}else{
@@ -158,7 +159,7 @@ $(function(){
 		}
 
 		$.cookie('sasaproduct',JSON.stringify(cookieobj),{expires : 7,path : '/'});
-		gouwucnum()
+		
 		location.href = 'shopping.html'
 	})
 	
